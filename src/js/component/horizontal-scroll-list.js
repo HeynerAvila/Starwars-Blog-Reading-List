@@ -17,7 +17,7 @@ export const HorizontalScrollList = props => {
 
 	return (
 		<div className="container-fluid mb-3">
-			<h3 className="text-danger mb-2">{props.listName}</h3>
+			<h3 className="text-warning bg-dark mb-2">{props.listName}</h3>
 			<div className="overflow-auto row flex-nowrap">{detailsHtml}</div>
 		</div>
 	);

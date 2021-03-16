@@ -32,7 +32,7 @@ export const ItemDetails = props => {
 
 			<hr className="bg-danger border border-danger" />
 
-			<div className="d-flex flex-row text-center text-danger">{detailsHtml}</div>
+			<div className="d-flex flex-row text-center text-light bg-dark">{detailsHtml}</div>
 		</div>
 	);
 };
