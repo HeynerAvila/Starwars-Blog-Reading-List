@@ -35,27 +35,27 @@ export const Planet = () => {
 	function parseDetailsToItemDetails(object) {
 		return [
 			{
-				label: "Population",
+				label: "Población",
 				value: object.population
 			},
 			{
-				label: "Terrain",
+				label: "Terreno",
 				value: object.terrain
 			},
 			{
-				label: "Climate",
+				label: "Clima",
 				value: object.climate
 			},
 			{
-				label: "Diameter",
+				label: "Diametro",
 				value: object.diameter
 			},
 			{
-				label: "Gravity",
+				label: "Gravedad",
 				value: object.gravity
 			},
 			{
-				label: "Rotation Period",
+				label: "Periodo de Rotación",
 				value: object.rotation_period
 			}
 		];
@@ -63,11 +63,9 @@ export const Planet = () => {
 
 	const itemDetails = parseDetailsToItemDetails(planet);
 	const description =
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu mollis erat." +
-		" Duis sed justo orci. Mauris a lacus vel erat congue aliquam. " +
-		" Fusce sit amet pellentesque enim, nec interdum diam. Phasellus consequat dolor magna." +
-		" Nam malesuada felis ac lectus volutpat varius. Suspendisse quis quam semper," +
-		" hendrerit mauris nec, eleifend.";
+		"En este anexo se listan los planetas y satélites naturales mencionados " +
+		"en el universo ficticio de la franquicia Star Wars, tanto los considerados " +
+		"canónicos como los del universo expandido (Star Wars Legends). ";
 
 	return <ItemDetails title={planet.name} description={description} details={itemDetails} />;
 };

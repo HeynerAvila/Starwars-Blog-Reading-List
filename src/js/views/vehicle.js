@@ -36,27 +36,27 @@ export const Vehicle = () => {
 	function parseDetailsToItemDetails(object) {
 		return [
 			{
-				label: "Manufacturer",
+				label: "Fabricante",
 				value: object.manufacturer
 			},
 			{
-				label: "Model",
+				label: "Modelo",
 				value: object.model
 			},
 			{
-				label: "Cargo Capacity",
+				label: "Capacidad de Cargo",
 				value: object.cargo_capacity
 			},
 			{
-				label: "Consumables",
+				label: "Consumibles",
 				value: object.consumables
 			},
 			{
-				label: "Crew",
+				label: "Tripulación",
 				value: object.crew
 			},
 			{
-				label: "Passengers",
+				label: "Pasajeros",
 				value: object.passengers
 			}
 		];
@@ -64,11 +64,11 @@ export const Vehicle = () => {
 
 	const itemDetails = parseDetailsToItemDetails(vehicle);
 	const description =
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu mollis erat." +
-		" Duis sed justo orci. Mauris a lacus vel erat congue aliquam. " +
-		" Fusce sit amet pellentesque enim, nec interdum diam. Phasellus consequat dolor magna." +
-		" Nam malesuada felis ac lectus volutpat varius. Suspendisse quis quam semper," +
-		" hendrerit mauris nec, eleifend.";
+		"En Star Wars existen inumerables vehículos y formas de propulsión. La mayoría de " +
+		"estos suelen tener un sistema de repulsión que los hace literalmente flotar sobre " +
+		"el suelo. Además, también hay una gran variedad de vehículos tanto aéreos como " +
+		"espaciales. Otros vehículos son sencillamente tanques zoomorfos que caminan como " +
+		"animales sobre los suelos de los más inhóspitos planetas. ";
 
 	return <ItemDetails title={vehicle.name} description={description} details={itemDetails} />;
 };

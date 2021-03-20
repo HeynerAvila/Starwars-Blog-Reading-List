@@ -25,7 +25,7 @@ export const Vehicles = () => {
 		let jsonMap = [];
 		if (store.vehiclesResponseJSON.results) {
 			jsonMap = store.vehiclesResponseJSON.results.map(function(vehicle, index) {
-				let details = ["Manufacturer: " + vehicle.manufacturer, "Model: " + vehicle.model];
+				let details = ["Fabricante: " + vehicle.manufacturer, "Modelo: " + vehicle.model];
 				return {
 					name: vehicle.name,
 					details: details
@@ -35,5 +35,5 @@ export const Vehicles = () => {
 		return jsonMap;
 	}
 
-	return <HorizontalScrollList listName={"Vehicles"} items={vehicles} link={"vehicle"} />;
+	return <HorizontalScrollList listName={"Vehiculos"} items={vehicles} link={"vehicle"} />;
 };

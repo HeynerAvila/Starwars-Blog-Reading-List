@@ -36,27 +36,27 @@ export const Character = () => {
 	function parseDetailsToItemDetails(object) {
 		return [
 			{
-				label: "Gender",
+				label: "Genero",
 				value: object.gender
 			},
 			{
-				label: "Hair Color",
+				label: "Color de Pelo",
 				value: object.hair_color
 			},
 			{
-				label: "Height",
+				label: "Altura",
 				value: object.height
 			},
 			{
-				label: "Mass",
+				label: "Masa",
 				value: object.mass
 			},
 			{
-				label: "Skin Color",
+				label: "Color de Piel",
 				value: object.skin_color
 			},
 			{
-				label: "Birth Year",
+				label: "Año de Nacimiento",
 				value: object.birth_year
 			}
 		];
@@ -64,11 +64,11 @@ export const Character = () => {
 
 	const itemDetails = parseDetailsToItemDetails(character);
 	const description =
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu mollis erat." +
-		" Duis sed justo orci. Mauris a lacus vel erat congue aliquam. " +
-		" Fusce sit amet pellentesque enim, nec interdum diam. Phasellus consequat dolor magna." +
-		" Nam malesuada felis ac lectus volutpat varius. Suspendisse quis quam semper," +
-		" hendrerit mauris nec, eleifend.";
+		"Dentro de la franquicia de medios Star Wars, existe una gran cantidad de personajes, " +
+		"en este anexo se listan y describen tanto a los personajes principales como a otros menores. " +
+		"Algunos de estos personajes solo pertenecen a la continuidad alternativa Leyendas, " +
+		"material previo al reinicio del canon en 2014, por tanto forman parte de la historia " +
+		"oficial de la saga. ";
 
 	return <ItemDetails title={character.name} description={description} details={itemDetails} />;
 };

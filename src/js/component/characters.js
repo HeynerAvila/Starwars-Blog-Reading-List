@@ -26,9 +26,9 @@ export const Characters = () => {
 		if (store.charactersResponseJSON.results) {
 			jsonMap = store.charactersResponseJSON.results.map(function(character, index) {
 				let details = [
-					"Gender: " + character.gender,
-					"Hair Color: " + character.hair_color,
-					"Eye Color: " + character.eye_color
+					"Genero: " + character.gender,
+					"Color de Pelo: " + character.hair_color,
+					"Color de Ojos: " + character.eye_color
 				];
 				return {
 					name: character.name,
@@ -40,5 +40,5 @@ export const Characters = () => {
 		return jsonMap;
 	}
 
-	return <HorizontalScrollList listName={"Characters"} items={characters} link={"character"} />;
+	return <HorizontalScrollList listName={"Personajes"} items={characters} link={"character"} />;
 };

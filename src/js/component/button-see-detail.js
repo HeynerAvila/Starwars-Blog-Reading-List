@@ -9,7 +9,7 @@ export function ButtonSeeDetail(props) {
 		item: PropTypes.string,
 		link: PropTypes.string
 	};
-	const BUTTON_LABEL = "Learn more!";
+	const BUTTON_LABEL = "¡Aprende más!";
 
 	let encodedName = encodeURIComponent(props.name);
 

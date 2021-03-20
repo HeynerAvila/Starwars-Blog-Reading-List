@@ -8,14 +8,14 @@ export const Navbar = () => {
 			<div className="container">
 				<Link to="/">
 					<span className="navbar-brand mb-0 h1">
+						{" "}
 						<img
 							src="http://www.officialpsds.com/images/thumbs/Star-Wars-Logo-psd35718.png"
 							width="120"
 							height="55"
 							alt=""
-						/>
-						{"    "}
-						May The Force Be With You.
+						/>{" "}
+						Que la Fuerza te Acompañe.
 					</span>
 				</Link>
 				<div className="ml-auto">

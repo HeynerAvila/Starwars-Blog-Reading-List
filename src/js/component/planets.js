@@ -25,7 +25,7 @@ export const Planets = () => {
 		let jsonMap = [];
 		if (store.planetsResponseJSON.results) {
 			jsonMap = store.planetsResponseJSON.results.map(function(planet, index) {
-				let details = ["Population: " + planet.population, "Terrain: " + planet.terrain];
+				let details = ["Población: " + planet.population, "Terreno: " + planet.terrain];
 
 				return {
 					name: planet.name,
@@ -36,5 +36,5 @@ export const Planets = () => {
 		return jsonMap;
 	}
 
-	return <HorizontalScrollList listName={"Planets"} items={planets} link={"planet"} />;
+	return <HorizontalScrollList listName={"Planetas"} items={planets} link={"planet"} />;
 };
