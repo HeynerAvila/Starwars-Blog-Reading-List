@@ -64,9 +64,9 @@ export const Starship = () => {
 
 	const itemDetails = parseDetailsToItemDetails(starship);
 	const description =
-		"En Star Wars existen inumerables naves estelares. La mayoría de " +
+		"En Star Wars existen inumerables naves estelares y formas de propulsión. La mayoría de " +
 		"estos suelen tener un sistema de repulsión que los hace literalmente flotar sobre " +
-		"el suelo. Además, también hay una gran variedad de vehículos tanto aéreos como " +
+		"el suelo. Además, también hay una gran variedad de naves tanto aéreos como " +
 		"espaciales. Otros vehículos son sencillamente tanques zoomorfos que caminan como " +
 		"animales sobre los suelos de los más inhóspitos planetas. ";
 
