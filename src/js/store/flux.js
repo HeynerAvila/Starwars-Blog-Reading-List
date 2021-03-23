@@ -8,12 +8,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 	const CHARACTERS_ENDPOINT = "people/";
 	const PLANETS_ENDPOINT = "planets/";
 	const VEHICLES_ENDPOINT = "vehicles/";
+	const STARSHIPS_ENDPOINT = "starships/";
 
 	return {
 		store: {
 			charactersResponseJSON: {},
 			planetsResponseJSON: {},
 			vehiclesResponseJSON: {},
+			starshipsResponseJSON: {},
 			favorites: []
 		},
 		actions: {
@@ -39,6 +41,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					getActions().setVehicles(json);
 				}
 			},
+			fetchGetStarships: async () => {
+				let json = await getActions().doFetch(SWAPI_ROOT + STARSHIPS_ENDPOINT);
+
+				if (json) {
+					getActions().setStarships(json);
+				}
+			},
 			setCharacters: json => {
 				setStore({ charactersResponseJSON: json });
 			},
@@ -47,6 +56,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			setVehicles: json => {
 				setStore({ vehiclesResponseJSON: json });
+			},
+			setStarships: json => {
+				setStore({ starshipsResponseJSON: json });
 			},
 			doFetch: endpoint => {
 				let fetchOptions = {
@@ -109,6 +121,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 				} else {
 					throw Error("Vehicle Not Found");
+				}
+			},
+			getStarshipByName: name => {
+				let store = getStore();
+				if (store.starshipsResponseJSON) {
+					return store.starshipsResponseJSON.results.find(starship => {
+						if (starship.name === name) {
+							return true;
+						} else {
+							return false;
+						}
+					});
+				} else {
+					throw Error("Starship Not Found");
 				}
 			},
 			isFavorite: name => {

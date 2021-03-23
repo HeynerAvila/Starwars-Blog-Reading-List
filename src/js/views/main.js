@@ -2,6 +2,7 @@ import React from "react";
 import { Characters } from "../component/characters";
 import { Planets } from "../component/planets";
 import { Vehicles } from "../component/vehicles";
+import { Starships } from "../component/starships";
 
 export const Main = () => {
 	return (
@@ -9,6 +10,7 @@ export const Main = () => {
 			<Characters />
 			<Planets />
 			<Vehicles />
+			<Starships />
 		</div>
 	);
 };
