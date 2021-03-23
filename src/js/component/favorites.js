@@ -13,7 +13,7 @@ export const Favorites = () => {
 	return (
 		<div className="btn-group">
 			<button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-				Favorites <span className="badge badge-secondary">{store.favorites.length}</span>
+				Favoritos <span className="badge badge-secondary">{store.favorites.length}</span>
 			</button>
 			<div className="dropdown-menu dropdown-menu-right">{mapFavorites}</div>
 		</div>

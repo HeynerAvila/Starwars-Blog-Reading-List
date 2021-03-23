@@ -7,10 +7,10 @@ export const Vehicles = () => {
 	const [vehicles, setVehicles] = useState([]);
 
 	useEffect(() => {
-		planetsProcess();
+		vehiclesProcess();
 	}, []);
 
-	async function planetsProcess() {
+	async function vehiclesProcess() {
 		await getVehicles();
 		localStorage.setItem("vehicles", JSON.stringify(store.vehiclesResponseJSON));
 		const vehiclesMap = mapVehicles();
